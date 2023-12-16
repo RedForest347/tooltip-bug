@@ -1,0 +1,167 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "react-app",
+        "plugin:jest/recommended",
+        "eslint-config-airbnb-base",
+        "airbnb/rules/react",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "jest",
+        "react",
+        "react-hooks"
+    ],
+    "ignorePatterns": [
+        "src/ui/**",
+        "src/lib/**"
+    ],
+    "settings": {
+        "import/extensions": [
+            ".js",
+            ".ts",
+            ".tsx"
+        ],
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        }
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "no-use-before-define": "off",
+        "react/function-component-definition": "off",
+        "function-paren-newline": 0,
+        "react/jsx-key": [
+            "error",
+            {
+                "checkFragmentShorthand": true
+            }
+        ],
+        "react/no-unknown-property": [
+            "error",
+            {
+                "ignore": [
+                    "css"
+                ]
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": [
+            "error"
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "@typescript-eslint/no-inferrable-types": 0,
+        "@typescript-eslint/explicit-function-return-type": [
+            "warn",
+            {
+                "allowTypedFunctionExpressions": true,
+                "allowExpressions": true
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": "warn",
+        "max-len": [
+            "error",
+            {
+                "code": 110
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "json": "never",
+                "js": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-indent-props": [
+            "error",
+            4
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 2
+            }
+        ],
+        "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "operator-linebreak": [
+            "error",
+            "after",
+            {
+                "overrides": {
+                    "?": "before",
+                    ":": "before"
+                }
+            }
+        ],
+        "no-trailing-spaces": [
+            "error",
+            {
+                "skipBlankLines": true
+            }
+        ],
+        "no-param-reassign": 0,
+        "import/prefer-default-export": 0,
+        "linebreak-style": 0,
+        "no-plusplus": 0,
+        "no-continue": 0,
+        "arrow-body-style": 0,
+        "no-shadow": 0,
+        "no-tabs": 0,
+        "no-underscore-dangle": 0,
+        "react/jsx-props-no-spreading": 0,
+        "func-names": [
+            "error",
+            "never",
+            {
+                "generators": "never"
+            }
+        ],
+        "no-restricted-exports": 0
+    }
+}
